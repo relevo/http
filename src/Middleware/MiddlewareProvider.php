@@ -3,7 +3,7 @@ declare(strict_types = 1);
 
 namespace Relevo\Http\Middleware;
 
-interface AddsMiddleware
+interface MiddlewareProvider
 {
     /**
      * Add middleware to pipeline.

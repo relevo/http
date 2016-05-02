@@ -3,7 +3,7 @@ declare(strict_types = 1);
 
 namespace Relevo\Http\Routing;
 
-interface AddsRequestRoutes
+interface RequestRoutesProvider
 {
     /**
      * Add request routes to router.
