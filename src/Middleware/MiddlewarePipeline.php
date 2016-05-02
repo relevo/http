@@ -3,10 +3,10 @@ declare(strict_types = 1);
 
 namespace Relevo\Http\Middleware;
 
-interface PipelineBuilder
+interface MiddlewarePipeline
 {
     /**
-     * Add middleware to the pipeline.
+     * Add middleware.
      *
      * @param string|callable $middleware
      */
