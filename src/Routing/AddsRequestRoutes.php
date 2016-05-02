@@ -3,12 +3,12 @@ declare(strict_types = 1);
 
 namespace Relevo\Http\Routing;
 
-interface RoutesRequests
+interface AddsRequestRoutes
 {
     /**
-     * Route http requests to middleware.
+     * Add request routes to router.
      *
      * @param RequestRouter $router
      */
-    public function routeRequests(RequestRouter $router);
+    public function addRequestRoutes(RequestRouter $router);
 }
