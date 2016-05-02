@@ -13,7 +13,7 @@ interface RequestRouter
      * @param array $middleware
      * @param string $name
      */
-    public function addRoute(array $methods, string $path, array $middleware, string $name = null);
+    public function route(array $methods, string $path, array $middleware, string $name = null);
 
     /**
      * Add GET route.
