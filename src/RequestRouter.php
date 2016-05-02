@@ -5,6 +5,8 @@ namespace Relevo\Http;
 
 interface RequestRouter
 {
+    public function route(array $methods, string $path, array $middleware, string $name = null);
+
     public function get(string $path, array $middleware, string $name = null);
 
     public function post(string $path, array $middleware, string $name = null);
