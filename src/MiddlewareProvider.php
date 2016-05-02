@@ -6,9 +6,9 @@ namespace Relevo\Http;
 interface MiddlewareProvider
 {
     /**
-     * Add request routes to the given router.
+     * Register middleware into the given router.
      *
      * @param RequestRouter $router
      */
-    public function addRequestRoutes(RequestRouter $router);
+    public function registerMiddleware(RequestRouter $router);
 }
