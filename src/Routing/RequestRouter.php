@@ -6,7 +6,7 @@ namespace Relevo\Http\Routing;
 interface RequestRouter
 {
     /**
-     * Add route.
+     * Add request route to router.
      *
      * @param array $methods
      * @param string $path
