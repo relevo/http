@@ -1,9 +1,9 @@
 <?php
 declare(strict_types = 1);
 
-namespace Relevo\Http\Routing;
+namespace Relevo\Http;
 
-interface RequestRouteProvider
+interface MiddlewareProvider
 {
     /**
      * Add request routes to the given router.

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types = 1);
 
-namespace Relevo\Http\Routing;
+namespace Relevo\Http;
 
 interface RequestRouter
 {
