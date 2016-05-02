@@ -16,7 +16,7 @@ interface RequestRouter
     public function route(array $methods, string $path, array $middleware, string $name = null);
 
     /**
-     * Add GET route.
+     * Add GET route to router.
      *
      * @param string $path
      * @param array $middleware
@@ -25,7 +25,7 @@ interface RequestRouter
     public function get(string $path, array $middleware, string $name = null);
 
     /**
-     * Add POST route.
+     * Add POST route to router.
      *
      * @param string $path
      * @param array $middleware
@@ -34,7 +34,7 @@ interface RequestRouter
     public function post(string $path, array $middleware, string $name = null);
 
     /**
-     * Add PUT route.
+     * Add PUT route to router.
      *
      * @param string $path
      * @param array $middleware
@@ -43,7 +43,7 @@ interface RequestRouter
     public function put(string $path, array $middleware, string $name = null);
 
     /**
-     * Add DELETE route.
+     * Add DELETE route to router.
      *
      * @param string $path
      * @param array $middleware
