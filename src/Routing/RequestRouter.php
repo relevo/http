@@ -6,7 +6,7 @@ namespace Relevo\Http\Routing;
 interface RequestRouter
 {
     /**
-     * Add request route to router.
+     * Add request route.
      *
      * @param array $methods
      * @param string $path
@@ -16,7 +16,7 @@ interface RequestRouter
     public function route(array $methods, string $path, array $middleware, string $name = null);
 
     /**
-     * Add GET route to router.
+     * Add GET route.
      *
      * @param string $path
      * @param array $middleware
@@ -25,7 +25,7 @@ interface RequestRouter
     public function get(string $path, array $middleware, string $name = null);
 
     /**
-     * Add POST route to router.
+     * Add POST route.
      *
      * @param string $path
      * @param array $middleware
@@ -34,7 +34,7 @@ interface RequestRouter
     public function post(string $path, array $middleware, string $name = null);
 
     /**
-     * Add PUT route to router.
+     * Add PUT route.
      *
      * @param string $path
      * @param array $middleware
@@ -43,7 +43,7 @@ interface RequestRouter
     public function put(string $path, array $middleware, string $name = null);
 
     /**
-     * Add DELETE route to router.
+     * Add DELETE route.
      *
      * @param string $path
      * @param array $middleware
