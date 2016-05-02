@@ -6,27 +6,27 @@ namespace Relevo\Http\Routing;
 interface RequestRouter
 {
     /**
-     * Route http requests to middleware.
+     * Route http request to middleware.
      */
     public function route(array $methods, string $path, array $middleware, string $name = null);
 
     /**
-     * Route GET requests to middleware.
+     * Route GET request to middleware.
      */
     public function get(string $path, array $middleware, string $name = null);
 
     /**
-     * Route POST requests to middleware.
+     * Route POST request to middleware.
      */
     public function post(string $path, array $middleware, string $name = null);
 
     /**
-     * Route PUT requests to middleware.
+     * Route PUT request to middleware.
      */
     public function put(string $path, array $middleware, string $name = null);
 
     /**
-     * Route DELETE requests to middleware.
+     * Route DELETE request to middleware.
      */
     public function delete(string $path, array $middleware, string $name = null);
 }
