@@ -3,8 +3,23 @@ declare(strict_types = 1);
 
 namespace Relevo\Http\Middleware\RequestRouter;
 
-interface RequestRouteCollection
+class RequestRouteCollection
 {
+    /**
+     * @var RequestRoute[]
+     */
+    private $routes;
+
+    /**
+     * Create new RequestRouteCollection.
+     *
+     * @param RequestRoute[] $routes
+     */
+    public function __construct(array $routes = [])
+    {
+        $this->routes = $routes;
+    }
+
     /**
      * Add request route.
      *
@@ -13,7 +28,10 @@ interface RequestRouteCollection
      * @param string[] $middleware
      * @param string $name
      */
-    public function add(array $methods, string $path, array $middleware, string $name = null);
+    public function add(array $methods, string $path, array $middleware, string $name = null)
+    {
+        $this->routes[] = new RequestRoute($methods, $path, $middleware, $name);
+    }
 
     /**
      * Add GET route.
@@ -22,7 +40,10 @@ interface RequestRouteCollection
      * @param string[] $middleware
      * @param string $name
      */
-    public function get(string $path, array $middleware, string $name = null);
+    public function get(string $path, array $middleware, string $name = null)
+    {
+        $this->add(['GET'], $path, $middleware, $name);
+    }
 
     /**
      * Add POST route.
@@ -31,7 +52,10 @@ interface RequestRouteCollection
      * @param string[] $middleware
      * @param string $name
      */
-    public function post(string $path, array $middleware, string $name = null);
+    public function post(string $path, array $middleware, string $name = null)
+    {
+        $this->add(['POST'], $path, $middleware, $name);
+    }
 
     /**
      * Add PUT route.
@@ -40,7 +64,10 @@ interface RequestRouteCollection
      * @param string[] $middleware
      * @param string $name
      */
-    public function put(string $path, array $middleware, string $name = null);
+    public function put(string $path, array $middleware, string $name = null)
+    {
+        $this->add(['PUT'], $path, $middleware, $name);
+    }
 
     /**
      * Add PATCH route.
@@ -49,7 +76,10 @@ interface RequestRouteCollection
      * @param string[] $middleware
      * @param string $name
      */
-    public function patch(string $path, array $middleware, string $name = null);
+    public function patch(string $path, array $middleware, string $name = null)
+    {
+        $this->add(['PATCH'], $path, $middleware, $name);
+    }
 
     /**
      * Add DELETE route.
@@ -58,12 +88,18 @@ interface RequestRouteCollection
      * @param string[] $middleware
      * @param string $name
      */
-    public function delete(string $path, array $middleware, string $name = null);
+    public function delete(string $path, array $middleware, string $name = null)
+    {
+        $this->add(['DELETE'], $path, $middleware, $name);
+    }
 
     /**
      * Get all routes as an array.
      *
      * @return RequestRoute[]
      */
-    public function toArray() : array;
+    public function toArray() : array
+    {
+        return $this->routes;
+    }
 }
