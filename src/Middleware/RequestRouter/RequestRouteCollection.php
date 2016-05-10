@@ -10,7 +10,7 @@ interface RequestRouteCollection
     /**
      * Add request route.
      *
-     * @param array $methods
+     * @param string[] $methods
      * @param string $path
      * @param MiddlewarePipeline|callable[]|string[] $middleware
      * @param string $name
