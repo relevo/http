@@ -8,7 +8,7 @@ interface MiddlewarePipeline
     /**
      * Add middleware.
      *
-     * @param callable $middleware
+     * @param callable|string $middleware
      */
-    public function pipe(callable $middleware);
+    public function add($middleware);
 }

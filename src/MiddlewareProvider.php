@@ -6,9 +6,9 @@ namespace Relevo\Http;
 interface MiddlewareProvider
 {
     /**
-     * Register middleware into the given pipeline.
+     * Add middleware to the given pipeline.
      *
      * @param MiddlewarePipeline $pipeline
      */
-    public function registerMiddleware(MiddlewarePipeline $pipeline);
+    public function addMiddleware(MiddlewarePipeline $pipeline);
 }
