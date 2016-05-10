@@ -8,7 +8,14 @@ interface MiddlewarePipeline
     /**
      * Add middleware.
      *
-     * @param callable|string $middleware
+     * @param string $middleware
      */
     public function add($middleware);
+
+    /**
+     * Get all middleware as an array.
+     *
+     * @return string[]
+     */
+    public function toArray() : array;
 }

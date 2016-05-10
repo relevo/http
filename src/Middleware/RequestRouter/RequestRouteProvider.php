@@ -9,6 +9,8 @@ interface RequestRouteProvider
      * Add request routes to the given collection.
      *
      * @param RequestRouteCollection $routes
+     *
+     * @return RequestRouteCollection
      */
-    public function addRequestRoutes(RequestRouteCollection $routes);
+    public function addRequestRoutes(RequestRouteCollection $routes) : RequestRouteCollection;
 }
