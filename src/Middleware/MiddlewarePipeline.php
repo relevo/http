@@ -1,7 +1,7 @@
 <?php
 declare(strict_types = 1);
 
-namespace Relevo\Http;
+namespace Relevo\Http\Middleware;
 
 interface MiddlewarePipeline
 {
