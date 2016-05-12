@@ -3,7 +3,7 @@ declare(strict_types = 1);
 
 namespace Relevo\Http\Middleware\RequestRouter;
 
-interface RequestRouteProvider
+interface MiddlewareProvider
 {
     /**
      * Get HTTP request routes.
