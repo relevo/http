@@ -94,7 +94,7 @@ class RequestRouteCollection
     }
 
     /**
-     * Get all routes as an array.
+     * Get all request routes as an array.
      *
      * @return RequestRoute[]
      */
