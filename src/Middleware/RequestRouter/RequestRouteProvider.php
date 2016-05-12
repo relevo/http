@@ -6,11 +6,11 @@ namespace Relevo\Http\Middleware\RequestRouter;
 interface RequestRouteProvider
 {
     /**
-     * Add request routes to the given collection.
+     * Get HTTP request routes.
      *
      * @param RequestRouteCollection $routes
      *
      * @return RequestRouteCollection
      */
-    public function addRequestRoutes(RequestRouteCollection $routes) : RequestRouteCollection;
+    public function getRequestRoutes(RequestRouteCollection $routes) : RequestRouteCollection;
 }
